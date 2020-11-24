@@ -1,0 +1,88 @@
+@keyframes reset {
+    0% { opacity: 0; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes spin {
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(0) translateY(-3px); }
+}
+
+@keyframes pulsatingBtn {
+    0%, 50%, 60%, 70%, 100% { 
+        transform: translateY(0px); 
+    }
+    55%, 65% { 
+        transform: translateY(-3px); 
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+	100% { opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1;}
+	100% { opacity: 0;}
+}
+
+@keyframes slideInIntro {
+    0% { top: -50%; opacity: 0;}
+	100% { top: 0; opacity: 1;}
+}
+
+@keyframes slideOutIntro {
+    0% { top: 0; opacity: 1}
+	100% { top: -50%; opacity: 0;}
+}
+
+@keyframes slideInBottom {
+    0% { transform: translateY(50px); opacity: 0;}
+	100% { transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes slideInLeft {
+    0% { left: -100%;}
+	100% { left: 0%;}
+}
+
+@keyframes slideInRight {
+    0% { right: -50%; opacity: 0;}
+	100% { right: 16px; opacity: 1;}
+}
+
+@keyframes slideOutRight {
+    0% { left: auto; right: 0;}
+	100% {left: auto; right: -100%;}
+}
+
+@keyframes swoshIn {
+    0% { transform: translateX(0) translateY(100); }
+	100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+	100% { transform: scale(0.5); opacity: 1; }
+}
+
+@keyframes scaleOut {
+    0% { transform: scale(0.5); opacity: 1; }
+	100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0) translateY(0px); opacity: 0; }
+	100% { transform: scale(1) translateY(0px); opacity: 1; }
+}
+
+@keyframes popOut {
+    0% { transform: scale(1) translateY(0px); opacity: 1; }
+	100% { transform: scale(0) translateY(0px); opacity: 0; }
+}
+

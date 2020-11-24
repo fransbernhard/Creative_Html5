@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name=viewport content="width=device-width, initial-scale=1"/>
+        <title>BANNER 00x00</title>
+
+        <!-- Set dimensions -->
+        <meta name="ad.size" content="width=120,height=600">
+        <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+
+        <link rel="icon" href="data:;base64,=">
+
+        <!-- Studio Enabler Required -->
+        <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+        <!-- DynamicContent Start: HTML5 invocation code. -->
+        <script type="text/javascript">
+            // Dynamic Content variables and sample values
+            Enabler.setProfileId(12345);
+            var devDynamicContent = {};
+
+            devDynamicContent.SampleElement = [{}];
+            devDynamicContent.SampleElement[0]._id = 0;
+            devDynamicContent.SampleElement[0].headline = "Some headline";
+            devDynamicContent.SampleElement[0].title = "Some title";
+            devDynamicContent.SampleElement[0].cta = "Button label";
+            devDynamicContent.SampleElement[0].image_url = {};
+            devDynamicContent.SampleElement[0].image_url.Url = "https://picsum.photos/200/200";
+            devDynamicContent.SampleElement[0].landing_url = {};
+            devDynamicContent.SampleElement[0].landing_url.Url = "http://www.yoursite.com";
+            devDynamicContent.SampleElement[0].campaign = "campaign_x";
+            devDynamicContent.SampleElement[0].campaign_image_background = {};
+            devDynamicContent.SampleElement[0].campaign_image_background.Type = "image";
+            devDynamicContent.SampleElement[0].campaign_image_background.Url = "https://picsum.photos/300/300";
+            devDynamicContent.SampleElement[0].campaign_image_intro = {};
+            devDynamicContent.SampleElement[0].campaign_image_intro.Type = "image";
+            devDynamicContent.SampleElement[0].campaign_image_intro.Url = "https://picsum.photos/100/100";
+            Enabler.setDevDynamicContent(devDynamicContent);
+        </script>
+    </head>
+        
+    <!--
+    * You may access the variables in the following manner
+    * AFTER the Studio Enabler is initialized:
+    * var price = dynamicContent.Product[0].price;
+    * Note: be sure to use "dynamicContent", not "devDynamicContent"
+    -->
+
+    <body>
+        <div class="Creative" id="creative">
+            <div 
+                class="Creative__Background-Exit" 
+                id="background-exit" 
+            ></div>
+
+            <img 
+                class="Creative__Background-Image onload" 
+                id="background-image" 
+                src="#" 
+                alt="" 
+            />
+
+            <div 
+                class="Creative__Introduction animated" 
+                id="introduction"
+            >
+                <img 
+                    id="introduction-image" 
+                    class="animated" 
+                    src="#" 
+                    alt="" 
+                />
+            </div>
+
+            <div class="Creative__Swosh init" id="swosh">
+                <img src="assets/swosh.png" alt="" />
+            </div>
+
+            <div 
+                class="Product__Image product-image animated" 
+                id="product-container"
+            >
+                <img id="product-image" src="#" alt="" />
+            </div>
+
+            <!-- <span 
+                class="Product__Title product-title animated" 
+                id="product-title"
+            ></span> -->
+
+            <!-- <div class="btn animated">  
+                <img 
+                    class="arrow" 
+                    src="assets/arrow.svg" 
+                    width="20" 
+                    height="20" 
+                    alt="" 
+                />
+                <span id="btn-text"></span>
+            </div> -->
+
+            <div class="Creative__Loader onload" id="loading">
+                <img 
+                    src="assets/loader.png" 
+                    width="70" 
+                    height="51" 
+                    alt="" 
+                />
+            </div>
+        </div>
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,13 @@
+%loading {
+    img {
+        animation: spin 8s linear infinite forwards;
+    }
+
+    &.init {        
+        animation: fadeout 0.3s linear 0s 1 normal forwards;
+	}
+}
+
+%swosh {
+    animation: swoshin 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 normal forwards;
+}

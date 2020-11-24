@@ -1,0 +1,126 @@
+// @font-face {
+//     font-family: 'mmtextpro';
+//     src: url('https://s0.2mdn.net/creatives/assets/2802015/mmtextprowebtt-semibold-webfont.woff2') format('woff2'),
+//          url('https://s0.2mdn.net/creatives/assets/2802015/mmtextprowebtt-semibold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@import 'reset';
+@import 'mixins';
+@import 'keyframes';
+@import 'extensions';
+
+$frameWidth: 600px;
+$frameHeight: 300px;
+$fontSansSerif: arial, sans-serif;
+$fontSerif: "Times New Roman", serif;
+$themeColor: #f0f8ff;
+$zIndex: 30;
+
+.Creative {
+    width: $frameWidth;
+    height: $frameHeight;
+    position: relative;
+    font-family: $fontSerif;
+    font-size: 11px;
+    color: #fff;
+    overflow: hidden;
+    background-image: url('../assets/default-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $themeColor;
+
+    &__Background-Exit {
+        display: block;
+        width: $frameWidth;
+        height: $frameHeight;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // z-index: $zIndex;
+        cursor: pointer;
+        border: 1px solid #dedede;
+    }
+
+    &__Background-Image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // z-index: 0;
+        opacity: 0;
+        height: auto;
+    
+        &.init {
+            @include animation(fadeIn 0.5s linear 0s 1 normal forwards);
+        }
+    }
+
+    &__Swosh {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        // z-index: 1;
+        @include translate(0, 100%);
+    
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        &.init {
+            @include animation(swoshIn 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 normal forwards);
+        }
+    }
+
+    &__Introduction {
+        position: absolute;
+        z-index: 9;
+        img {
+            &.story {
+                @include animation(slideInIntro 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.3s 1 normal forwards);
+                @include animation(float 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s infinite normal forwards);
+                @include animation(slideOutIntro 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 7.5s 1 normal forwards);
+            }
+    
+            &.finalstory {
+                @include animation(slideInIntro 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s 1 normal forwards);
+                @include animation(float 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s infinite normal forwards);
+            }
+        }
+    }
+
+    &__Loader {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 18%;
+        
+        img {
+            @include animation(spin 8s linear infinite forwards);
+        }
+    
+        &.init {
+            @include animation(fadeOut 0.3s linear 0s 1 normal forwards);
+        }
+    }
+}
+
+.Product {
+    &__Image {
+        position: absolute;
+    }
+
+    &__Title {
+        position: absolute;
+    }
+}
+

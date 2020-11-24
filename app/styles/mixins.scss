@@ -1,0 +1,26 @@
+@mixin fade($fadeTo, $time){
+    -webkit-transition: $fadeTo $time;
+    transition: $fadeTo $time;
+}
+
+@mixin scale($size) {
+	-webkit-transform: scale($size);
+	-ms-transform: scale($size);
+	transform: scale($size);
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translateX($x) translateY($y);
+	-moz-transform: translateX($x) translateY($y);
+	-ms-transform: translateX($x) translateY($y);
+	-o-transform: translateX($x) translateY($y);
+	transform: translateX($x) translateY($y);		
+}
+
+@mixin animation($args) {
+    -webkit-animation: $args;
+	-moz-animation: $args;
+	-o-animation: $args;
+	animation: $args;
+}
+
